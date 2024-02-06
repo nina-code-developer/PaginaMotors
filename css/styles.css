@@ -1,0 +1,296 @@
+:root {
+    --fuenteHeading: 'Roboto', sans-serif;
+    --fuenteParrafo: 'Poppins', sans-serif;
+
+    --primario: #E9967A;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafo);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*/
+.contenedor {
+    max-width: 120rem;
+    width: 60%;
+    width: min(60%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Utilidades */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+
+/*Header*/
+.header {
+    background-image: url(../img/banner2.png);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px){
+    .header__texto {
+        margin-top: 13rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .barra {
+        /**/flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /**/padding: 1.5rem 50px;
+    }
+
+    /*Recien Ingresado*/
+    .navegacion {
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .navegacion__enlace{
+        margin: 0 1rem;
+    }
+
+    
+
+}
+
+.logo {
+    color: var(--blanco);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+    
+.navegacion__enlace {
+    display: block; /*Elementos de en Lista*/
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+a.navegacion__enlace {
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /*Separacion*/
+        column-gap: 4rem;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+    margin: 0 auto;
+}
+
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    background-color: var(--negro);
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border: none;
+    transition: var(--blanco) 0.3s ease, color 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block; /*Son inmunes al margin*/ /*display: inline-block si permite margin & width*/
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--blanco);
+    color: var(--negro);
+    border: 2px solid var(--negro);
+
+}
+
+.boton--primario {
+    background-color: var(--negro);
+}
+
+.boton--secundario {
+    background-color: var(--primario);
+}
+
+.widget-motor {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-motor:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-motor__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-motor__info {
+    font-weight: normal;
+}
+
+.widget-motor__label,
+.widget-motor__info {
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--negro);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    color: var(--blanco);
+
+}
+
+.sobre-nosotros__imagen {
+    width: 65%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*Sobre Nosotros*/
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        column-gap: 2rem;
+    }
+    
+}
+
+
+/*Contacto*/
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
